@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/app.css" />
+    <script src="scripts/app.js" defer></script>
+    <title>My Favorite Games</title>
+</head>
+
+<body>
+    <div id="backdrop"></div>
+    <div class="modal card" id="add-modal">
+        <div class="modal__content">
+            <label for="title">Game Name</label>
+            <input type="text" name="title" id="title" />
+            <label for="image-url">Image URL</label>
+            <input type="text" name="image-url" id="image-url" />
+            <label for="platform">Platform</label>
+            <select id="platform" name="platform">
+                <option value="PC">PC</option>
+                <option value="Playstation">Playstation</option>
+                <option value="XBOX">XBOX</option>
+                <option value="Nintendo">Nintendo</option>
+            </select>
+            <label for="genre">Genre</label>
+            <select id="genre" name="genre">
+                <option value="Action/Adventure">Action/Adventure</option>
+                <option value="Strategy">Strategy</option>
+                <option value="FPS">FPS</option>
+                <option value="MMO">MMO</option>
+                <option value="RPG">RPG</option>
+                <option value="Survival">Survival</option>
+            </select>
+            <label for="rating">Your Rating</label>
+            <input type="number" step="1" max="5" min="1" name="rating" id="rating" />
+        </div>
+        <div class="modal__actions">
+            <button class="btn btn--passive">Cancel</button>
+            <button class="btn btn--success">Add</button>
+        </div>
+    </div>
+    <div class="modal card" id="delete-modal">
+        <h2 class="modal__title">Are you sure?</h2>
+        <p class="modal__content">
+            Are you sure you want to delete this item?
+        </p>
+        <div class="modal__actions">
+            <button class="btn btn--passive">No (Cancel)</button>
+            <button class="btn btn--danger">Yes</button>
+        </div>
+    </div>
+    <header>
+        <h1>My Favorite Games</h1>
+        <button>ADD GAME</button>
+    </header>
+
+    <main>
+        <section id="entry-text" class="card">
+            <p>My Favorite Games List!</p>
+        </section>
+        <ul id="game-list"></ul>
+    </main>
+
+</body>
+
+</html>
